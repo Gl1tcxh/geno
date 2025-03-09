@@ -1,0 +1,267 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    font-family: Montserrat, sans-serif; /* Added sans-serif fallback */
+    overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
+}
+
+.container {
+    color: #DE81C3;
+    display: flex;
+    flex-direction: column; /* Mobile-first approach, column by default */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 90%; /* Mobile-first width */
+    gap: 16px; /* Increased gap for better spacing on mobile */
+    text-align: center;
+    min-height: 80vh; /* Use min-height instead of fixed height */
+    padding: 20px 10px; /* Add padding for breathing room */
+}
+
+.info {
+    text-align: center;
+    width: 100%;
+}
+
+/* Fullscreen Particle Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 16px; /* Increased gap for better touch targets */
+    margin: 20px auto; /* Added vertical margin */
+    flex-wrap: wrap; /* Allows icons to stack if needed */
+}
+
+.logo {
+    width: 100px; /* Smaller by default for mobile */
+    height: 100px;
+    max-width: 100%; /* Ensure it doesn't overflow container */
+}
+
+.slogan {
+    color: #DE81C3;
+    font-size: 0.9rem; /* Use rem units for better scaling */
+    text-align: center;
+    margin: 10px 0; /* Add some vertical spacing */
+}
+
+.services_button {
+    background-color: #DE81C3;
+    border-radius: 8px; /* Increased for better touch targets */
+    color: black;
+    font-size: 1rem; /* Use rem units */
+    text-decoration: none;
+    padding: 12px 20px; /* Larger touch target */
+    transition: background 0.3s ease;
+    display: inline-block; /* Better for touch targets */
+    margin: 10px 0; /* Add vertical spacing */
+}
+
+.services_button:hover, .services_button:active { /* Added active state for touch */
+    background-color: white;
+}
+
+.badge {
+    width: 50px; /* Smaller by default for mobile */
+    height: 50px;
+    max-width: 100%; /* Ensure it doesn't overflow container */
+}
+
+/* Media query for tablets and larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        width: 80%;
+        gap: 24px;
+    }
+    
+    .logo {
+        width: 140px;
+        height: 140px;
+        margin-bottom: -60px;
+    }
+    
+    .slogan {
+        font-size: 1rem;
+    }
+    
+    .services_button {
+        font-size: 1.1rem;
+    }
+    
+    .badge {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Media query for large screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 60%;
+    }
+}
+
+/* Add tap highlight color for mobile */
+a {
+    -webkit-tap-highlight-color: rgba(222, 129, 195, 0.3);
+}
+
+/* Fix for iOS Safari height issues */
+@supports (-webkit-touch-callout: none) {
+    body, html {
+        height: -webkit-fill-available;
+    }
+}
+.selfie{
+    border-radius: 100px;
+}
+.slogan{
+    font-weight: 500;
+    font-style: italic;
+    font-size: large;
+}
+.lang_button{
+    background-color: #8F1A77;
+    border-radius: 100%; /* Increased for better touch targets */
+    color: black;
+    font-size: 1rem; /* Use rem units */
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    padding: 12px 20px; /* Larger touch target */
+    transition: background 0.3s ease;
+    display: inline-block; /* Better for touch targets */
+    margin: 10px 0; /* Add vertical spacing */
+}
+.Geno{
+    color: #8F1A77;
+    font-size: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes elements to opposite ends */
+    align-items: center; /* Centers items vertically */
+    padding: 0 20px; /* Adds some spacing */
+
+}
+
+.description {
+    color: #DE81C3;
+    display: flex;
+    flex-direction: column; /* Default to column layout for mobile */
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Full width on mobile */
+    gap: 16px;
+    text-align: center;
+    min-height: 10vh;
+    padding: 20px 10px;
+}
+
+/* For larger screens (PC) */
+@media screen and (min-width: 768px) {
+    .description {
+        flex-direction: row; /* Change to row layout on PC */
+        width: 90%; /* Reduced width on desktop */
+    }
+}
+.left{
+    width: 50%;
+    background-color: black;
+    color: #e9cbe0;
+    font-weight: 500;
+}
+.quote{
+    color: #DE81C3;
+    font-weight: 500;
+}
+.thoughfew{
+    color: #DE81C3;
+    font-weight: 500;
+}
+.churchil{
+    color: #DE81C3;
+    font-weight: 500;
+}
+.esntain{
+    color: #DE81C3;
+    font-weight: 500;
+}
+.daraob{
+    color: #DE81C3;
+    font-weight: 500;
+}
+.right{
+    width: 50%;
+    background-color: black;
+    font-weight: 500;
+    color: #e9cbe0;
+}
+.quote{
+    font-size: large;
+}
+.bottom_container {
+    color: #DE81C3;
+    display: flex; /* Corrected display */
+    flex-direction: row; /* Default: row */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 40%; /* Full width by default */
+    gap: 10px;
+    text-align: center;
+}
+
+
+/* Media query for phones */
+@media (max-width: 768px) {
+    .bottom_container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        width: 100%; /* Ensure full width */
+    }
+}
+
+.middle{
+    background-color: black;
+    color: #e9cbe0;
+    font-weight: 500;
+}
+
+.back_button{
+    background-color: #8F1A77;
+    border-radius: 8px; /* Increased for better touch targets */
+    color: black;
+    font-size: 1rem; /* Use rem units */
+    text-decoration: none;
+    padding: 12px 20px; /* Larger touch target */
+    transition: background 0.3s ease;
+    display: inline-block; /* Better for touch targets */
+    margin: 40px 0px; /* Add vertical spacing */
+    margin-left: 10px;
+}
+.teveragingtechnology{
+    font-weight: bold;
+}
+.contacttoday{
+    font-weight: bold;
+}
+
+.headtext{
+    color: #DE81C3;
+    text-align: center;
+    font-size: 50px;
+}
